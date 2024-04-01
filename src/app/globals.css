@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    font-family: 'Teko', sans-serif;
+    font-size: 22px;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Anton', sans-serif;
+}
+
+.body-blanco {
+  background: url('/images/blan.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.body-negro {
+  background: url('/images/negro.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.img-grid {
+  max-width: 100px; /* Establece el ancho máximo */
+  max-height: 100px; /* Establece la altura máxima */
+}
+
+.img-git{
+  width: 150px; /* Establece el ancho máximo */
+  height: 150px; /* Establece la altura máxima */
+}
+
+.img-x{
+  width: 120px; /* Establece el ancho máximo */
+  height: 120px; /* Establece la altura máxima */
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container p {
+  position: absolute;
+  bottom: 0;
+  left: 90%;
+  top: 40%;
+  transform: translateX(-50%);
+}
+
+.pr{
+  width: 600px;
+  height: 590px;
+}
+
+.yo{
+  width: '1800px';
+  height: '4000px';
+  border-radius: '300px 300px 0 0';
+}
+ 
+
+.certificado{
+  width: '1200px';
+  height: '800px';
+  border-Radius: 'inherit';
+}
+
+.footer{
+  text-decoration: none;
+  color: white;
+}
+
+.intro {
+  font-family: 'Anton', sans-serif;
+    font-size: 120px;
+  color: transparent;
+  -webkit-text-stroke-width: 2px; /* Ancho del borde */
+  -webkit-text-stroke-color: indigo; /* Color del borde */
+  animation-name: fillText; /* Nombre de la animación */
+  animation-duration: 1s; /* Duración de la animación */
+  animation-delay: 2s; /* Retraso antes de que la animación comience */
+  animation-fill-mode: forwards; /* La animación retiene el valor final después de que termine */
+}
+
